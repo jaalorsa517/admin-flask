@@ -1,0 +1,40 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    border-top: 10px solid red
+}
+
+main h1{
+    margin: 15px;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: #04040490;
+}
+
+.button-link {
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    background: blue;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.button-link:hover{
+    font-size: 40px;
+    color: goldenrod;
+}

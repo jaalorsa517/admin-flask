@@ -1,0 +1,7 @@
+{% macro form_user(endpoint, type)%}
+    <form action={{url_for(endpoint)}} method="post">
+        <input type="text" name="nickname" id="password" placeholder="Nickname" class="input">
+        <input type="password" name="password" id="password" placeholder="Password" class="input">
+        <input type="submit" value={{type}} class="input">
+    </form>
+{% endmacro %}

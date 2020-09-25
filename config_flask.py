@@ -1,7 +1,15 @@
 #Script para configurar flask
-
+from apps.auth import auth
+from flask import Flask
+from flask_login import LoginManager
 import click
 import os
+
+def config_app():
+    app = Flask(__name__)
+    app.register_blueprint(auth)
+    login= LoginManager(app)
+    return app
 
 def config():
     _flask_app()

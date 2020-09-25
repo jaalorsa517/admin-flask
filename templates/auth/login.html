@@ -1,0 +1,8 @@
+{% from "componentes/form.html" import form_user %}
+{% extends "base.html" %}
+{% block title%}
+    Login
+{% endblock %}
+{% block main %}
+    {{form_user('auth.login','login')}}
+{% endblock %}
