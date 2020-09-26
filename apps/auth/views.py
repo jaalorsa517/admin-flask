@@ -45,8 +45,11 @@ def singupPost():
     singup_form = UserForm()
     if singup_form.validate_on_submit():
         nickname = singup_form.nickname.data
-        password = generate_password_hash(singup_form.password.data)
-        User.setUser(nickname, password)
-        flash('Usuario creado')
-        return redirect(url_for('auth.login'))
-    return redirect(url_for('singup'))
+        if User.getUser(nickname) is None:
+            password = generate_password_hash(singup_form.password.data)
+            User.setUser(nickname, password)
+            flash('Usuario creado')
+            return redirect(url_for('auth.login'))
+        else:
+            flash('Usario ya existe')
+    return redirect(url_for('auth.singup'))
