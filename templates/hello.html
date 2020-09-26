@@ -1,9 +1,10 @@
+{% from 'componentes/button-link.html' import button_link%}
 {% extends 'index.html' %}
 
 {%block title%}
-    Bienvenido
+    Bienvenido {{name}}
 {% endblock %}
 {% block main %}
-    <h1>Bienvenido</h1>
-    <a href="{{url_for('auth.logout')}}">Logout</a>
+    <h1>Bienvenido {{name}}</h1>
+    {{button_link('auth.logout','Logout')}}
 {% endblock main %}

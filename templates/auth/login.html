@@ -8,6 +8,14 @@
         {{login_form.hidden_tag()}}
         {{login_form.nickname(class_="input-form", placeholder='nickname')}}
         {{login_form.password(class_="input-form", placeholder='password')}}
-        {{login_form.submit}}
+        <div class="buttons-form">
+            {{login_form.submit}}
+            <button class="cancel" href="{{url_for('auth.singup')}}">
+                <a href="{{url_for('auth.singup')}}">
+                    Singup
+                </a>
+            </button>
+            
+        </div>
     </form>
 {% endblock %}

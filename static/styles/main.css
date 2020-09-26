@@ -10,7 +10,7 @@ main {
     flex-direction: column;
     background: #f0f0f0;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 25px;
+    border-radius: 15px;
     border-top: 10px solid red
 }
 
@@ -19,7 +19,12 @@ main h1{
     text-align: center;
     font-size: 50px;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    color: #04040490;
+    color: rgb(41, 47, 52);
+}
+
+main h2 {
+    text-align: center;
+    color:rgb(41, 47, 52);
 }
 
 .button-link {
@@ -39,19 +44,41 @@ main h1{
     color: goldenrod;
 }
 
-.input-form{
-    margin: 10px 0;
+.flash {
+    width: 100%;
+    margin: auto;
+    font-size: 18px;
     text-align: center;
-    font-size: 16px;
-    background: #fefefe;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
+    color: rgb(41, 47, 52);
+    border-top-left-radius:  5px;
+    border-top-right-radius: 5px;
+    background-color: rgb(100,250,100);
 }
+
 form {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-form h2{
+
+.input-form{
+    margin: 10px 0;
+    font-size: 16px;
     text-align: center;
+    background: #fefefe;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
+}
+
+.buttons-form {
+    margin: auto;
+}
+
+.cancel a:link {
+    text-decoration: none;
+    color: rgb(41, 47, 52);
+}
+
+.cancel a:visited {
+    color: rgb(41, 47, 52);
 }

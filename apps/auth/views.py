@@ -25,7 +25,7 @@ def loginPost():
     if login_form.validate_on_submit():
         nickname = login_form.nickname.data
         password = login_form.password.data
-        user= User.getUser(nickname)
+        user = User.getUser(nickname)
         if user is not None and check_password_hash(user.password, password):
             login_user(user)
             flash('Ingreso correcto')
@@ -36,7 +36,7 @@ def loginPost():
 
 @auth.route('/singup')
 def singup():
-    context = dict(singup_form = UserForm())
+    context = dict(singup_form=UserForm())
     return render_template('auth/singup.html', **context)
 
 
@@ -46,7 +46,7 @@ def singupPost():
     if singup_form.validate_on_submit():
         nickname = singup_form.nickname.data
         password = generate_password_hash(singup_form.password.data)
-        User.setUser(nickname,password)
+        User.setUser(nickname, password)
         flash('Usuario creado')
         return redirect(url_for('auth.login'))
     return redirect(url_for('singup'))

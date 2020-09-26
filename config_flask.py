@@ -25,7 +25,6 @@ def config_app():
 def config():
     _flask_app()
     _mode()
-    _environ()
 
 
 def _flask_app():
@@ -35,15 +34,8 @@ def _flask_app():
 
 
 def _mode():
-    if click.confirm('Development?'):
-        os.environ['FLASK_ENV'] = 'Development'
-    else:
+    if click.confirm('Production?'):
         os.environ['FLASK_ENV'] = 'Production'
-
-
-def _environ():
-    if click.confirm('Debug?'):
-        os.environ['FLASK_DEBUG'] = '1'
     else:
-        os.environ['FLASK_DEBUG'] = '0'
-    os.system('flask run')
+        os.environ['FLASK_ENV'] = 'Development'
+

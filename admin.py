@@ -22,9 +22,10 @@ def root():
 @app.route('/hello')
 @login_required
 def hello():
-    return render_template('hello.html')
+    name = current_user.id.capitalize()
+    return render_template('hello.html',name= name)
 
 
 if __name__ == "__main__":
     config()
-    app.run()
+    app.run(debug=True)
