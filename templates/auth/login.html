@@ -1,8 +1,13 @@
-{% from "componentes/form.html" import form_user %}
 {% extends "base.html" %}
 {% block title%}
     Login
 {% endblock %}
 {% block main %}
-    {{form_user('auth.login','login')}}
+    <h2>Login</h2>
+    <form action="{{url_for('auth.loginPost')}}" method="post">
+        {{login_form.hidden_tag()}}
+        {{login_form.nickname(class_="input-form", placeholder='nickname')}}
+        {{login_form.password(class_="input-form", placeholder='password')}}
+        {{login_form.submit}}
+    </form>
 {% endblock %}

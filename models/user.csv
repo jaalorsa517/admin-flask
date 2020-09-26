@@ -1,2 +1,2 @@
-id_user,name,password,role
-1,root,admin,admin
+name,password,role
+jaime,pbkdf2:sha256:150000$3LNA7pX3$f8880f6d253a2b1a3877ea728e2dfef68b220da295b33d0731e2812fa38eebe5,
