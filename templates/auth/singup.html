@@ -3,16 +3,15 @@
     Singup
 {% endblock title%}
 {% block main %}
-    <h2>Singup</h2>
     <form action="{{url_for('auth.singup')}}" method="post">
         {{singup_form.hidden_tag()}}
         {{singup_form.nickname(class="input-form", placeholder= 'nickname')}}
         {{singup_form.password(class="input-form", placeholder= 'password')}}
         <div class="buttons-form">
-            {{singup_form.submit}}
-            <button class="cancel" href="{{url_for('auth.singup')}}">
+            {{singup_form.submit(class="button-form", value="Regístrese")}}
+            <button class="cancel button-form" href="{{url_for('auth.singup')}}">
                 <a href="{{url_for('auth.login')}}">
-                    Login
+                    Ingrese
                 </a>
             </button>
         </div>

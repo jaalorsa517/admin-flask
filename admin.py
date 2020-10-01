@@ -1,7 +1,7 @@
 #! /opt/venv/admin/bin/python
 
 from config_flask import config, config_app
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_required, current_user
 
 app = config_app()
@@ -13,17 +13,12 @@ def page_not_found(error):
 
 
 @app.route('/')
-def root():
-    if current_user.is_authenticated:
-        return redirect(url_for('hello'))
-    return render_template('index.html')
-
-
 @app.route('/hello')
 @login_required
 def hello():
     name = current_user.id.capitalize()
-    return render_template('hello.html',name= name)
+    flash(f'Bienvenido {name}')
+    return render_template('index.html')
 
 
 if __name__ == "__main__":

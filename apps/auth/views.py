@@ -9,13 +9,14 @@ from werkzeug.security import generate_password_hash, check_password_hash
 @auth.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('root'))
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/login')
 def login():
     login_form = UserForm()
     context = dict(login_form=login_form)
+    flash('Ingrese')
     return render_template('auth/login.html', **context)
 
 
@@ -37,6 +38,7 @@ def loginPost():
 @auth.route('/singup')
 def singup():
     context = dict(singup_form=UserForm())
+    flash('Regístrese')
     return render_template('auth/singup.html', **context)
 
 

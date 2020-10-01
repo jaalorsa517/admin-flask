@@ -1,58 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1A1182;
+}
+
 body {
     width: 100vw;
     height: 100vh;
 }
 
-main {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    background: #f0f0f0;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 15px;
-    border-top: 10px solid red
+a {
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 2;
+    color: #1A1182;
 }
 
-main h1{
-    margin: 15px;
+a:visited {
+    color: #1A1182;
+}
+
+main {
+    width: 320px;
+    height: auto;
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgba(77, 220, 186, 0.62);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 5px solid #F21515
+}
+
+main h1 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 52px;
     text-align: center;
-    font-size: 50px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     color: rgb(41, 47, 52);
 }
 
 main h2 {
     text-align: center;
-    color:rgb(41, 47, 52);
+    color: rgb(41, 47, 52);
 }
 
 .button-link {
-    padding: 15px;
-    margin: 15px 0;
-    font-size: 30px;
+    width: 127px;
+    height: 41px;
     text-decoration: none;
     text-align: center;
-    color:white;
-    background: blue;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    background: rgba(91, 125, 242, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
 }
 
-.button-link:hover{
-    font-size: 40px;
-    color: goldenrod;
+.button-link:hover {
+    background: rgba(70, 219, 112, 0.7);
 }
 
 .flash {
-    width: 100%;
-    margin: auto;
+    width: 320px;
+    height: 28px;
     font-size: 18px;
-    text-align: center;
-    color: rgb(41, 47, 52);
-    border-top-left-radius:  5px;
-    border-top-right-radius: 5px;
-    background-color: rgb(100,250,100);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    background: #E8F3F0;
+    border-radius: 5px;
 }
 
 form {
@@ -61,24 +86,35 @@ form {
     justify-content: center;
 }
 
-.input-form{
-    margin: 10px 0;
-    font-size: 16px;
+.input-form {
+    width: 320px;
+    height: 28px;
+    margin-bottom: 9px;
     text-align: center;
-    background: #fefefe;
+    background: #E9E9E9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
+    border: none;
+}
+
+.input-form::placeholder {
+    color: #C6C5C5;
 }
 
 .buttons-form {
     margin: auto;
 }
 
-.cancel a:link {
-    text-decoration: none;
-    color: rgb(41, 47, 52);
+.button-form {
+    width: 105px;
+    height: 41px;
+    font-size: 18px;
+    background: rgba(91, 125, 242, 0.7);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
 }
 
-.cancel a:visited {
-    color: rgb(41, 47, 52);
-}
+/* .button-form a {
+    color: #1A1182;
+} */
