@@ -2,9 +2,38 @@
 {% extends 'index.html' %}
 
 {%block title%}
-    Bienvenido {{name}}
+Bienvenido {{name}}
 {% endblock %}
 {% block main %}
-    <h1>Bienvenido {{name}}</h1>
-    {{button_link('auth.logout','Logout')}}
+<form action="{{url_for('adminPost')}}" method="post">
+    {{form_user.hidden_tag()}}
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Usario</th>
+                <th>Admin</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in form_user.rows %}
+            <tr>
+                <td>
+                    {{row.nickname(class='celda-nickname', placeholder='nickname')}}
+                </td>
+                <td>
+                    {{row.check()}}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="buttons-form">
+        {{form_user.submit(class="button-form", value="Modificar")}}
+        <button class="button-form" href="{{url_for('hello')}}">
+            <a href="{{url_for('hello')}}">
+                Inicio
+            </a>
+        </button>
+    </div>
+</form>
 {% endblock main %}

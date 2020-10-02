@@ -6,6 +6,11 @@ from models.users import User
 import click
 import os
 
+'''
+User admin
+nickname, password = root
+root,pbkdf2:sha256:150000$uZH9iOgR$6e75353c21a99a6d06e14f1f93ed84bbb7aa4d8a1409eb3bd3cdcce5734c634b,True
+'''
 
 def config_app():
     app = Flask(__name__)

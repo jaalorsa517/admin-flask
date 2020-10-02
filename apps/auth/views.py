@@ -30,7 +30,10 @@ def loginPost():
         if user is not None and check_password_hash(user.password, password):
             login_user(user)
             flash('Ingreso correcto')
-            return redirect(url_for('hello'))
+            if bool(int(user.role)):
+                return redirect(url_for('admin'))
+            else:
+                return redirect(url_for('hello'))
         flash('Usuario o contraseña inválida')
     return redirect(url_for('auth.login'))
 
