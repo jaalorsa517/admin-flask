@@ -1,6 +1,6 @@
 #! /opt/venv/admin/bin/python
 
-from config_flask import config, config_app
+from config_flask import config_app
 from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_required, current_user
 from models.users import User
@@ -32,7 +32,8 @@ def admin():
 def adminPost():
     table_form = TableForm(formdata=request.form)
     if table_form.validate_on_submit():
-        rows = [ dict(name=dic['nickname'], role=(str(1) if dic['check'] else str(0))) for dic in table_form.rows.data]
+        rows = [dict(name=dic['nickname'], role=(
+            str(1) if dic['check'] else str(0))) for dic in table_form.rows.data]
         User.updateUser(rows)
         flash('Actualización correcta')
     return redirect(url_for('admin'))
@@ -48,5 +49,4 @@ def hello():
 
 
 if __name__ == "__main__":
-    config()
-    app.run(debug=True)
+    app.run()
