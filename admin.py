@@ -1,6 +1,6 @@
 #! /opt/venv/admin/bin/python
 
-from config_flask import config_app
+from config_flask import config, config_app
 from flask import render_template, request, redirect, url_for, flash
 from flask_login import login_required, current_user
 from models.users import User
@@ -48,5 +48,3 @@ def hello():
     return render_template('index.html', admin=admin)
 
 
-if __name__ == "__main__":
-    app.run()
