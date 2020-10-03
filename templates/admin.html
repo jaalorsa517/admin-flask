@@ -16,14 +16,17 @@ Bienvenido {{name}}
         </thead>
         <tbody>
             {% for row in form_user.rows %}
-            <tr>
-                <td>
-                    {{row.nickname(class='celda-nickname', placeholder='nickname')}}
-                </td>
-                <td>
-                    {{row.check()}}
-                </td>
-            </tr>
+                {% if not row.nickname.data == 'root'%}
+                    <tr class="celda">
+                        {{row.hidden_tag()}}
+                        <td>
+                            {{row.nickname(class='celda-nickname', placeholder='nickname')}}
+                        </td>
+                        <td>
+                            {{row.check(class='celda-check')}}
+                        </td> 
+                    </tr>
+                {% endif %}
             {% endfor %}
         </tbody>
     </table>

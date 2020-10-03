@@ -41,21 +41,30 @@ main {
 }
 
 main h1 {
+    margin: 15px;
     font-size: 44px;
     font-weight: bold;
     line-height: 52px;
     text-align: center;
     color: rgb(41, 47, 52);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 main h2 {
     text-align: center;
     color: rgb(41, 47, 52);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main p {
+    margin: 15px;
 }
 
 .button-link {
     width: 127px;
     height: 41px;
+    margin: 0 5px;
+    font-size: 18px;
     text-decoration: none;
     text-align: center;
     background: rgba(91, 125, 242, 0.7);
@@ -103,18 +112,48 @@ form {
 
 .buttons-form {
     margin: auto;
+    display: flex;
 }
 
 .button-form {
     width: 105px;
     height: 41px;
+    margin: 0 5px;
     font-size: 18px;
     background: rgba(91, 125, 242, 0.7);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
-/* .button-form a {
-    color: #1A1182;
-} */
+.button-form:hover {
+    background: rgba(70, 219, 112, 0.7);
+}
+
+.admin-table {
+    width: 320px;
+    height: auto;
+    max-height: 80vh;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+.celda {
+    text-align: center;
+}
+
+.celda-nickname {
+    width: 90%;
+    background: #E8F3F0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.celda-check {
+    background: #E8F3F0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

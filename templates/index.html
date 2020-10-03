@@ -1,9 +1,14 @@
 {% from "componentes/button-link.html" import button_link %}
 {%extends "base.html" %}
 {% block title %}
-Inicio
+    Inicio
 {% endblock %}
 {% block main%}
-<p>Esta es la página de inicio que muestra la funcionalidad de flask para administrar usuarios y permisos.</p>
-{{button_link('auth.logout','Cerrar sesión')}}
+    <p>Esta es la página de inicio que muestra la funcionalidad de flask para administrar usuarios y permisos.</p>
+    <div class="buttons-form">
+        {{button_link('auth.logout','Cerrar sesión')}}
+        {% if admin %}
+            {{button_link('admin','Permisos')}}
+        {% endif %}
+    </div>
 {% endblock %}
