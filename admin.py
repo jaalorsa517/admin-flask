@@ -48,3 +48,6 @@ def hello():
     return render_template('index.html', admin=admin)
 
 
+# if __name__ == "__main__":
+#     config()
+#     app.run()
